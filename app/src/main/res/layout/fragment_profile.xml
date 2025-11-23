@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".Fragment.ProfileFragment">
+
+
+    <!-- Convert All Expenses to PDF -->
+<LinearLayout
+    android:layout_width="match_parent"
+  android:weightSum="2"
+    android:layout_marginTop="@dimen/_65sdp"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    >
+    <TextView
+        android:layout_width="@dimen/_30sdp"
+        android:layout_weight="1"
+        android:layout_height="@dimen/_30sdp"
+        android:text="Convert Into PDF "
+        android:textSize="16sp"
+        android:layout_marginStart="15dp" />
+        <ImageView
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_weight="1"
+            android:id="@+id/pdimage"
+            android:src="@drawable/pdfr" />
+
+
+</LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:gravity="bottom"
+        android:layout_height="wrap_content"
+        android:text="Copyright    © @asndeveloper "
+        android:textSize="16sp"
+      />
+    </LinearLayout>
+
+

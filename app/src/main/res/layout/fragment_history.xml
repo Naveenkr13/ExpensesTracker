@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.HistoryFragment">
+    <!-- Search Bar -->
+    <EditText
+        android:layout_marginTop="@dimen/_45sdp"
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search expenses..."
+        android:padding="10dp"
+
+        android:drawableLeft="@android:drawable/ic_menu_search"
+        android:layout_marginBottom="10dp"/>
+
+    <!-- Sort Options -->
+    <Spinner
+        android:id="@+id/sortSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/sort_options"
+        android:layout_marginBottom="10dp" />
+
+    <!-- Filter by Category -->
+    <Spinner
+        android:id="@+id/filterSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/category_options"
+        android:layout_marginBottom="10dp" />
+
+    <!-- TODO: Update blank fragment layout -->
+<androidx.recyclerview.widget.RecyclerView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/historyrecyler"
+    />
+
+</LinearLayout>

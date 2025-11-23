@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="pie1">#FF7043</color>   <!-- Orange -->
+    <color name="pie2">#29B6F6</color>   <!-- Blue -->
+    <color name="pie3">#66BB6A</color>   <!-- Green -->
+    <color name="pie4">#AB47BC</color>   <!-- Purple -->
+    <color name="pie5">#FFA726</color>   <!-- Yellow -->
+
+</resources>

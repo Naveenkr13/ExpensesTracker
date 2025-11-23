@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F6FA">
+    <!-- Floating Add Expense Button -->
+
+
+    <!-- Scrollable Content -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scro"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="@dimen/_16sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Title -->
+            <TextView
+                android:id="@+id/tvWelcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_35sdp"
+                android:text="Hello,Dear 👋"
+                android:textSize="@dimen/_22sdp"
+                android:textStyle="bold"
+                android:textColor="#222" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your Expenses Overview"
+                android:textSize="@dimen/_14sdp"
+                android:textColor="#666"
+                android:layout_marginBottom="@dimen/_16sdp"/>
+
+            <!-- Total Expense Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_16sdp"
+                app:cardElevation="@dimen/_6sdp"
+                app:cardCornerRadius="@dimen/_16sdp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="@dimen/_20sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="Total Spent"
+                        android:textSize="@dimen/_16sdp"
+                        android:textColor="#444"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/txte"
+                        android:text="₹ 0"
+                        android:textSize="@dimen/_28sdp"
+                        android:textStyle="bold"
+                        android:textColor="#ff5722"
+                        android:layout_marginTop="@dimen/_6sdp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <!-- PIE CHART CARD -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_16sdp"
+                app:cardElevation="5dp"
+                app:cardCornerRadius="@dimen/_16sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:padding="@dimen/_16sdp"
+                    android:layout_height="wrap_content">
+
+                    <com.github.mikephil.charting.charts.PieChart
+                        android:id="@+id/pie"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_250sdp"/>
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <!-- Recent Transactions -->
+            <TextView
+                android:text="Recent Transactions"
+                android:textSize="@dimen/_18sdp"
+                android:textStyle="bold"
+                android:textColor="#222"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/ft"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+
+        android:contentDescription="Add Expense"
+        android:src="@drawable/plus"
+        app:tint="@android:color/black"
+        android:layout_marginRight="@dimen/_25sdp"
+        android:layout_marginBottom="@dimen/_95sdp"
+        app:backgroundTint="#B7E6B9"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
